@@ -1,0 +1,140 @@
+/*
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+*/
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 'regular';
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'medium';
+    src: url(assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'semi-bold';
+    src: url(assets/fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+
+* {
+    font-family: 'regular';
+}
+
+ion-label {
+    display: block;
+}
+
+.bg_image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blue_btn {
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-family: 'medium';
+    height: 48px;
+    --border-radius: 5px;
+}
+
+.sort_modal {
+    --min-width: 100%;
+    align-items: flex-end !important;
+
+    .alert-title.sc-ion-alert-md {
+        text-align: center;
+        font-size: 18px;
+        font-family: medium;
+    }
+
+    .alert-wrapper.sc-ion-alert-md {
+        border-radius: 20px 20px  0px 0px !important;
+    }
+    .alert-button-group.sc-ion-alert-md {
+        padding: 0px;
+    }
+}
+
+.bottom_menu {
+    .action-sheet-group.sc-ion-action-sheet-md {
+        border-radius: 20px 20px  0px 0px !important;
+    }
+    .action-sheet-group.sc-ion-action-sheet-md:first-child {
+        padding-top: 16px !important;
+    }
+    .action-sheet-icon.sc-ion-action-sheet-md {
+        color: black;
+    }
+}
+
+ion-modal.share_modal {
+    --height: 80%;
+    align-items: flex-end;
+    --border-radius: 15px 15px 0px 0px;
+    .modal-wrapper {
+        width: 100% !important;
+    }
+}
+
+ion-modal.notification_modal {
+    --height: 350px;
+    align-items: flex-end;
+    --border-radius: 15px 15px 0px 0px;
+    .modal-wrapper {
+        width: 100% !important;
+    }
+}
+
+
+ion-title {
+    font-family: 'semi-bold';
+    font-size: 21px;
+    color: var(--ion-color-dark);
+}
+
+ion-segment {
+    background-color: #ffffff;
+}
+ion-footer{
+    background: #ffffff;
+    color: black;
+}

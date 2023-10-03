@@ -1,0 +1,106 @@
+/*
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+*/
+.main_content_div {
+
+    .comment_div {
+        padding: 16px;
+        display: flex;
+
+        .user_container {
+            height: 50px;
+            width: 50px;
+            min-width: 50px;
+            background: linear-gradient(#e7495d, #a62fb4);
+            border-radius: 100%;
+            position: relative;
+
+            .back_image {
+                height: 47px;
+                width: 47px;
+                min-width: 47px;
+                border-radius: 100%;
+                border: 3px solid white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        .back_image2 {
+            height: 40px;
+            width: 40px;
+            min-width: 40px;
+            border-radius: 100%;
+            border: 1px solid grey;
+        }
+        .comment_content {
+            padding-left: 16px;
+            padding-right: 16px;
+
+            .comment_lbl {
+                font-size: 15px;
+                span {
+                    font-family: 'medium';
+                }
+            }
+            .time_lbl {
+                font-size: 14px;
+                color: grey;
+
+                span {
+                    font-family: 'medium';
+                    margin-left: 16px;
+                }
+            }
+        }
+        .icn_div {
+            padding-top: 8px;
+            ion-icon {
+                color: grey;
+                font-size: 16px;
+            }
+        }
+        .icn_div2 {
+            padding-top: 8px;
+            position: absolute;
+            right: 16px;
+            ion-icon {
+                color: grey;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.footer_div {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    padding-right: 0px;
+
+    .back_image {
+        height: 40px;
+        width: 40px;
+        min-width: 40px;
+        border-radius: 100%;
+    }
+    .ip_div {
+        width: 100%;
+        padding-left: 16px;
+        ion-input {
+            font-family: 'regular';
+        }
+    }
+    ion-button {
+        font-family: 'medium';
+        letter-spacing: 0.5px;
+        --border-radius: 3px;
+        height: 36px;
+    }
+}

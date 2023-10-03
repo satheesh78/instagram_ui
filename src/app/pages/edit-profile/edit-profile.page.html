@@ -1,0 +1,57 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Edit Profile</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="goBack()">
+                <ion-icon slot="icon-only" name="checkmark"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="content_div">
+            <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/users/user1.jpg)'"></div>
+            <ion-label class="blue_lbl">Change Profile Photo</ion-label>
+
+            <ion-item>
+                <ion-label position="floating">Name</ion-label>
+                <ion-input type="text" placeholder="Name"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Username</ion-label>
+                <ion-input type="text" placeholder="Name"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Website</ion-label>
+                <ion-input type="text" placeholder="Name"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Bio</ion-label>
+                <ion-input type="text" placeholder="Name"></ion-input>
+            </ion-item>
+        </div>
+
+        <ion-label class="extra_lbl">Switch to Professional Account</ion-label>
+        <ion-label class="extra_lbl">Personal Information Settings</ion-label>
+
+    </div>
+</ion-content>

@@ -1,0 +1,20 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<div class="story_flex">
+    <div class="single_story" *ngFor="let item of users;let i = index;">
+        <div class="color_div" (click)="openStoryView(i)">
+            <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'">
+                <div class="add_box" *ngIf="i==0">
+                    <ion-icon name="add-circle"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <ion-label class="name">{{item.name}}</ion-label>
+    </div>
+</div>

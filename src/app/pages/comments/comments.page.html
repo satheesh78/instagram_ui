@@ -1,0 +1,96 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Comments</ion-title>
+        <ion-buttons slot="end" (click)="openShareModal()">
+            <ion-button>
+                <ion-icon slot="icon-only" name="paper-plane-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="comment_div" style="border-bottom: 1px solid lightgrey;">
+            <div class="user_container">
+                <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/users/user2.jpg)'"></div>
+            </div>
+            <div class="comment_content">
+                <ion-label class="comment_lbl">
+                    <span>rcap_designs</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio obcaecati nostrum praesentium
+                    deleniti, culpa neque! Aliquid ipsa, dolore reprehenderit fugiat possimus error.
+                </ion-label>
+                <ion-label class="time_lbl">40m</ion-label>
+            </div>
+        </div>
+
+        <div class="comment_div" style="position: relative; padding-bottom: 0px;" *ngFor="let item of users; let i = index">
+            <div class="user_container">
+                <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+            </div>
+            <div class="comment_content">
+                <div>
+                    <ion-label class="comment_lbl">
+                        <span>rcap_designs</span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </ion-label>
+                    <ion-label class="time_lbl">40m
+                        <span>1 Like</span>
+                        <span>Reply</span>
+                    </ion-label>
+                </div>
+                <div *ngIf="i == 0">
+                    <div class="comment_div" style="padding: 0px; margin-top: 16px;" *ngFor="let item of [1,2]">
+                        <div class="bg_image back_image2" [style.backgroundImage]="'url(assets/imgs/users/user2.jpg)'"></div>
+                        <div class="comment_content">
+                            <div>
+                                <ion-label class="comment_lbl">
+                                    <span>rcap_designs</span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </ion-label>
+                                <ion-label class="time_lbl">40m
+                                    <span>1 Like</span>
+                                    <span>Reply</span>
+                                </ion-label>
+                            </div>
+                        </div>
+                        <div class="icn_div2">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="icn_div">
+                <ion-icon name="heart-outline"></ion-icon>
+            </div>
+        </div>
+
+    </div>
+</ion-content>
+
+<ion-footer>
+    <div class="footer_div">
+        <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/users/user2.jpg)'"></div>
+        <div class="ip_div">
+            <ion-input type="text" placeholder="Add a comment..."></ion-input>
+        </div>
+        <ion-button mode="ios" fill="clear" mode="ios">
+            Post
+        </ion-button>
+    </div>
+</ion-footer>

@@ -1,0 +1,203 @@
+/*
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+*/
+.posts{
+    .header_div{
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        .back_image {
+            width: 50px;
+            min-width: 50px;
+            height: 50px;
+            border-radius: 100%;
+        }
+        .user_detail {
+            padding-left: 12px;
+            width: 100%;
+            .name_lbl {
+                font-family: 'medium';
+            }
+            .small_lbl {
+                font-size: 12px;
+            }
+        }
+        ion-icon {
+            font-size: 24px;
+        }
+    }
+
+    .media_feed{
+        .back_img{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100% !important;
+            height: 42vh;
+        }
+        .div_banner{
+            width: 100%;
+            height: 42vh !important;
+            background: black;
+            .icon_play{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 0;
+                width: 80px;
+            }
+            .videoPlayer{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .detail_container {
+        padding: 16px;
+        .user_action{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+
+            div {
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-right: 16px;
+                }
+                ion-icon {
+                    font-size: 24px;
+                    margin-right: 16px;
+                }
+                .action_icon{
+                    width: 24px;
+                }
+                .action_liked{
+                      width: 30px;
+                }
+            }
+        }
+        .comment_div {
+            .comments_count{
+                font-family: 'medium';
+            }
+            .user_comment{
+                span{
+                    font-family: 'medium';
+                    margin-right: 5px;
+                }
+            }
+            .comment_all{
+                color: grey;
+            }
+        }
+        .ip_flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .back_image {
+                height: 40px;
+                width: 40px;
+                min-width: 40px;
+                border-radius: 100%;
+                margin-right: 10px;
+            }
+            ion-input {
+                font-family: 'regular';
+            }
+            .last_div {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 20px;
+                    margin-right: 10px;
+                }
+                ion-icon {
+                    color: grey;
+                    font-size: 20px;
+                    margin-right: 16px;
+                }
+            }
+        }
+        .time_lbl {
+            color: grey;
+            font-size: 14px;
+        }
+    }
+
+}
+
+.suggestion_main{
+    padding: 16px;
+    .header_flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        ion-label {
+            font-family: 'medium';
+        }
+    }
+
+    .reels_flex {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        overflow: scroll;
+
+        .single_reel {
+            width: 130px;
+            height: 200px;
+            border-radius: 10px;
+            margin-right: 16px;
+
+            .videoPlayer{
+                width: 130px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+    }
+  .suggestions{
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      margin: 10px 5px;
+      width: 100%;
+      background: white;
+      .profilePic{
+          width: 125px;
+          padding: 10px;
+          border-radius: 50%;
+      }
+      .username{
+          font-size: 1rem;
+          font-weight: bold;
+          margin: 0px;
+      }
+      .followdByText{
+          font-size: 0.8rem;
+          margin: 0px;
+      }
+      .followedBy{
+          font-size: 0.8rem;
+          margin: 0px;
+      }
+      ion-button{
+          height: 30px;
+          margin: 10px 10px;
+      }
+  }
+}
+
+

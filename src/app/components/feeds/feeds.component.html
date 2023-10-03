@@ -1,0 +1,88 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<div *ngFor="let item of posts;let i = index;">
+    <!-- Feeds Images and Videos -->
+    <div class="posts" *ngIf="item !== 5">
+
+        <div class="header_div">
+            <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/users/user4.jpg)'"></div>
+            <div class="user_detail">
+                <ion-label class="name_lbl">rcap_designs</ion-label>
+                <ion-label class="small_lbl">Victoria Seychelles</ion-label>
+            </div>
+            <ion-icon name="ellipsis-vertical-sharp"></ion-icon>
+        </div>
+
+        <!-- <div class="media_feed">
+            <app-image-feeds *ngIf="item != 3" [image]="item.img"></app-image-feeds>
+            <app-video-feeds *ngIf="item == 3"></app-video-feeds>
+        </div> -->
+
+        <div class="media_feed">
+            <app-image-feeds *ngIf="item.type == 'photo' || item.type == 'gallery'" [image]="item.img"></app-image-feeds>
+            <app-video-feeds *ngIf="item.type == 'reels' || item.type == 'video'"></app-video-feeds>
+        </div>
+
+        <div class="detail_container">
+            <div class="user_action">
+                <div>
+                    <img [src]="i % 2 == 0 ? 'assets/imgs/heart.png':'assets/imgs/red_heart.png'"
+                      [className]="i % 2 == 0 ?'action_icon':'action_liked'">
+                    <ion-icon name="chatbubble-outline" (click)="openComments()"></ion-icon>
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                </div>
+                <div>
+                    <ion-icon name="bookmark-outline" style="margin: 0px;"></ion-icon>
+                </div>
+            </div>
+            <div class="comment_div">
+                <ion-label class="comments_count">9912 likes</ion-label>
+                <ion-label class="user_comment">
+                    <span>rcap_designs</span>
+                    Lorem Ipsum is simply dummy text.
+                </ion-label>
+                <ion-label class="comment_all">View All 591 comments</ion-label>
+                <div class="ip_flex">
+                    <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/users/user1.jpg)'"></div>
+                    <div style="width: 100%;">
+                        <ion-input type="text" placeholder="Add a comment..."></ion-input>
+                    </div>
+                    <div class="last_div">
+                        <img src="assets/imgs/red_heart.png">
+                        <img src="assets/imgs/hand.png">
+                        <div>
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                        </div>
+
+                    </div>
+                </div>
+                <ion-label class="time_lbl">20 minutes ago</ion-label>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Suggestions -->
+    <div *ngIf="item === 4 && page == 'home'" class="suggestion_main">
+        <div class="header_flex">
+            <ion-label>Suggested for You</ion-label>
+            <ion-label>Watch All</ion-label>
+        </div>
+
+        <div class="reels_flex">
+            <div class="single_reel" *ngFor="let item of [1,2,3,4,5]">
+                <video preload="metadata" webkit-playsinline="webkit-playsinline" autoplay class="videoPlayer" poster="assets/imgs/feeds/3.jpg"
+                #videoPlayer>
+                  <source src="assets/imgs/feeds/feeds.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+    </div>
+</div>

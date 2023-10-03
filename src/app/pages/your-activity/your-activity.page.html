@@ -1,0 +1,96 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Your Activity</ion-title>
+    </ion-toolbar>
+    <ion-segment value="time" mode="md" color="dark" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="time">
+            <ion-label>Time</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="links">
+            <ion-label>Links</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="content_div" *ngIf="tabID == 'time'" style="border-bottom: 1px solid lightgrey;">
+
+            <div class="title_flex">
+                <ion-label class="bold_lbl">Time on Instagram</ion-label>
+                <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+
+            <ion-label class="color_text">1<span>h</span>2<span>h</span></ion-label>
+
+            <ion-label class="bold_grey">Daily Average</ion-label>
+            <ion-label class="small_grey">
+                Average time you spent per day using the Instagram app on this device in
+                last week
+            </ion-label>
+
+        </div>
+
+        <div class="content_div" *ngIf="tabID == 'time'">
+
+          <div class="title_flex">
+              <ion-label class="bold_lbl">Manage Your Time</ion-label>
+          </div>
+
+          <div class="flex_div">
+              <div>
+                  <ion-label class="simp_lbl">Set Daily Reminder</ion-label>
+                  <ion-label class="small_lbl">We'll send you a reminder once you've reached the time you set for your self.</ion-label>
+              </div>
+              <div>
+                  <ion-icon name="chevron-forward"></ion-icon>
+              </div>
+          </div>
+
+          <div class="flex_div">
+              <div>
+                  <ion-label class="simp_lbl">Notification Settings</ion-label>
+                  <ion-label class="small_lbl">Choose which Instagram notifications to get. You can also mute push notifications.</ion-label>
+              </div>
+              <div>
+                  <ion-icon name="chevron-forward"></ion-icon>
+              </div>
+          </div>
+
+
+
+
+      </div>
+
+        <div class="content_div" *ngIf="tabID == 'links'">
+            <div class="title_flex">
+                <ion-label class="bold_lbl">Links you've visited</ion-label>
+                <ion-label>Hide History</ion-label>
+            </div>
+
+            <div class="link_flex" *ngFor="let item of [1,2,3,4,5,6]">
+                <div class="bg_image back_image"></div>
+                <div class="link_detail">
+                    <ion-label class="name_lbl">Holter Designs Woman's Flat Shoes</ion-label>
+                    <ion-label class="site_lbl">www.holterdesigns.com</ion-label>
+                    <ion-label class="date_lbl">December 31, 2021</ion-label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ion-content>

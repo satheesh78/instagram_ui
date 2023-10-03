@@ -1,0 +1,60 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-content fullscreen color="dark">
+    <ion-slides #slides [options]="slideOpts" (ionSlideDidChange)="slideDidChange(slides)">
+        <ion-slide *ngFor="let item of demos;let i = index">
+
+            <video preload="metadata" webkit-playsinline="webkit-playsinline" autoplay loop class="videoPlayer"  #videoPlayer>
+                <source src="{{item.video}}" type="video/mp4" />
+            </video>
+
+            <div class="main_content">
+                <div class="first_div">
+                    <div class="user_flex">
+                        <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.user +')'"></div>
+                        <ion-label>{{item.username}}</ion-label>
+                        <ion-button fill="outline" mode="ios" class="outline_btn">
+                            Follow
+                        </ion-button>
+                    </div>
+                    <div class="content_div">
+                        <ion-label *ngIf="isDescView == false" (click)="toggleText()">{{item.description | slice : 0: 30}}...</ion-label>
+                        <ion-label *ngIf="isDescView == true" (click)="toggleText()">{{item.description}}</ion-label>
+                    </div>
+                    <div class="music_flex">
+                        <ion-icon name="musical-notes"></ion-icon>
+                        <ion-label>Tanveer Evan</ion-label>•
+                        <ion-label>Maine Royaan (Lofi Remix)</ion-label>
+                    </div>
+                </div>
+
+                <div class="action_div">
+                    <div>
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-label>600k</ion-label>
+                    </div>
+                    <div>
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                        <ion-label>1,921</ion-label>
+                    </div>
+                    <div>
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="ellipsis-vertical-sharp" (click)="presentActionSheet()"></ion-icon>
+                    </div>
+                    <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/feeds/2.jpg)'">
+
+                    </div>
+                </div>
+            </div>
+
+        </ion-slide>
+    </ion-slides>
+</ion-content>

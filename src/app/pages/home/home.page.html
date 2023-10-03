@@ -1,0 +1,20 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <img src="assets/imgs/dSPEEDUP-LOGO.webp" class="app_name" slot="start">
+        <img src="assets/imgs/add.png" class="header_icon_send" slot="end">
+        <img src="assets/imgs/messenger.png" class="header_icon_send" slot="end" (click)="openChatScreen()">
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <app-story [users]="users"></app-story>
+    <app-feeds [page]="'home'" [posts]="posts"></app-feeds>
+</ion-content>

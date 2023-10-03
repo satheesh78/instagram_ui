@@ -1,0 +1,129 @@
+/*
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+*/
+ion-title {
+  padding-left: 0px;
+}
+ion-segment {
+  border-bottom: 1px solid lightgray;
+  ion-segment-button {
+    ion-label {
+      text-transform: none;
+      font-family: "semi-bold";
+      font-size: 16px;
+    }
+  }
+}
+
+.main_content_div {
+  padding: 16px;
+
+  ion-input {
+    border-radius: 10px;
+    font-family: "regular";
+    background: whitesmoke;
+    height: 40px;
+    margin-bottom: 16px;
+    --padding-start: 10px;
+
+    ion-icon {
+      margin-left: 10px;
+    }
+  }
+
+  .title_lbl {
+    font-family: "semi-bold";
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .title_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    ion-label {
+      font-size: 18px;
+      span {
+        font-family: "semi-bold";
+      }
+    }
+    ion-icon {
+      border: 1px solid black;
+      border-radius: 100%;
+      font-size: 14px;
+      padding: 4px;
+    }
+  }
+
+  .flex_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .back_image {
+      height: 56px;
+      width: 56px;
+      min-width: 56px;
+      border-radius: 100%;
+    }
+    .round_box {
+      position: relative;
+      border: 2px solid black;
+
+      ion-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+        font-size: 30px;
+      }
+    }
+    .detail_div {
+      padding-left: 16px;
+      width: 100%;
+
+      .username {
+        font-family: "medium";
+        font-size: 15px;
+        line-height: 20px;
+      }
+      .view_name {
+        color: grey;
+        font-size: 15px;
+        line-height: 20px;
+      }
+      .small_name {
+        font-size: 14px;
+        color: grey;
+      }
+    }
+    ion-button {
+      --border-radius: 5px;
+      font-size: 14px;
+      font-family: "medium";
+      letter-spacing: 0.5px;
+      margin: 0px;
+      height: 36px;
+    }
+    .outline_btn {
+      --border-color: lightgrey;
+      color: black;
+    }
+    .fill_btn {
+      --background: var(--ion-app-blue-color);
+    }
+    ion-icon {
+      font-size: 20px;
+      color: grey;
+    }
+  }
+}

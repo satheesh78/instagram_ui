@@ -1,0 +1,101 @@
+/*
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+*/
+.main_content_div {
+    .note_div {
+        background: #f1f1f1;
+        padding: 16px;
+
+        ion-label {
+            color: grey;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+
+    .content_div {
+        padding: 16px;
+
+        .flex_div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .round_box {
+                height: 56px;
+                width: 56px;
+                min-width: 56px;
+                border-radius: 100%;
+                position: relative;
+                border: 1px solid lightgrey;
+
+                ion-icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color: black;
+                    font-size: 30px;
+                }
+            }
+            .detail_div {
+                padding-left: 16px;
+                width: 100%;
+
+                .username {
+                    font-family: 'medium';
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+            }
+            .grey_lbl {
+                display: flex;
+                align-items: center;
+                color: grey;
+                font-family: 'medium';
+
+                ion-icon {
+                    margin-left: 5px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .image_div {
+            border: 2px solid black;
+            width: 120px;
+            height: 120px;
+            border-radius: 100%;
+            position: relative;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: 60px;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 60px;
+            }
+        }
+
+        .bold_lbl {
+            text-align: center;
+            font-size: 24px;
+            font-family: 'semi-bold';
+            margin-bottom: 10px;
+        }
+        .small_lbl {
+            font-size: 14px;
+            color: grey;
+            text-align: center;
+        }
+    }
+}

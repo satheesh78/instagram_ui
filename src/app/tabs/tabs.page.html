@@ -1,0 +1,37 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-tabs mode="md" (ionTabsDidChange)="tabChange($event)">
+    <ion-tab-bar slot="bottom">
+
+        <ion-tab-button tab="home">
+            <ion-icon name="home-outline" *ngIf="currentTab !== 'home'"></ion-icon>
+            <ion-icon name="home" *ngIf="currentTab == 'home'"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="search">
+            <ion-icon name="search-outline" *ngIf="currentTab !== 'search'"></ion-icon>
+            <ion-icon name="search" *ngIf="currentTab == 'search'"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="reels">
+            <ion-icon name="film-outline" *ngIf="currentTab !== 'reels'"></ion-icon>
+            <ion-icon name="film" *ngIf="currentTab == 'reels'"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="activity">
+            <ion-icon name="heart-outline" *ngIf="currentTab !== 'activity'"></ion-icon>
+            <ion-icon name="heart" *ngIf="currentTab == 'activity'"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button tab="profile">
+            <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/users/user1.jpg)'"></div>
+        </ion-tab-button>
+
+    </ion-tab-bar>
+</ion-tabs>

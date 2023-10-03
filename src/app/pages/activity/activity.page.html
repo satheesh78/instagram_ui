@@ -1,0 +1,44 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>Activity</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="content_div">
+
+          <ion-input type="text" placeholder="Search">
+              <ion-icon name="search"></ion-icon>
+          </ion-input>
+
+          <ion-label class="title_lbl">Suggestions for you</ion-label>
+
+          <div class="flex_div" *ngFor="let item of (users | slice : 2)">
+              <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+              <div class="detail_div">
+                  <ion-label class="username">{{item.name}}</ion-label>
+                  <ion-label class="view_name">{{item.name}}</ion-label>
+                  <ion-label class="small_name">Followed by mosam123...</ion-label>
+              </div>
+              <ion-button class="fill_btn" mode="ios">
+                  Follow
+              </ion-button>
+              <div style="margin-left: 10px;">
+                  <ion-icon name="close"></ion-icon>
+              </div>
+          </div>
+
+        </div>
+
+    </div>
+</ion-content>

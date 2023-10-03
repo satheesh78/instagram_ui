@@ -1,0 +1,27 @@
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="user_div">
+      <ion-icon class="back" name="arrow-back" (click)="goBack()"></ion-icon>
+      <div class="bg_image user_back" [style.backgroundImage]="'url(assets/imgs/users/user1.jpg)'"></div>
+
+      <div class="user_detail">
+        <ion-label class="username">John</ion-label>
+        <ion-label class="time">Today, 3:00 pm</ion-label>
+      </div>
+
+      <ion-button (click)="presentPopover($event)" fill="clear" size="small">
+        <ion-icon name="ellipsis-vertical" color="light"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+
+
+<ion-progress-bar [value]="(currentIndex + 1) / stories.length"></ion-progress-bar>
+ <img [src]="stories[currentIndex].imageUrl"  (click)="handleImageClick($event)"/>
+<!-- 
+ <ion-progress-bar [value]="progressValue"></ion-progress-bar>
+ <ion-img [src]="currentImage"></ion-img> -->
+
+</ion-content>

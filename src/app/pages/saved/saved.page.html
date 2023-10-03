@@ -1,0 +1,73 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Saved</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="goToAddSaved()">
+                <ion-icon slot="icon-only" name="add"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-row>
+
+            <ion-col size="6" class="right">
+                <div class="col_div">
+                    <ion-row>
+                        <ion-col size="6" (click)="goToAllSaved()">
+                            <div class="bg_image back_image top_left" [style.backgroundImage]="'url('+ posts[0].img +')'"></div>
+                        </ion-col>
+                        <ion-col size="6" (click)="goToAllSaved()">
+                            <div class="bg_image back_image top_right" [style.backgroundImage]="'url('+ posts[1].img +')'"></div>
+                        </ion-col>
+                        <ion-col size="6" (click)="goToAllSaved()">
+                            <div class="bg_image back_image bottom_left" [style.backgroundImage]="'url('+ posts[2].img +')'"></div>
+                        </ion-col>
+                        <ion-col size="6" (click)="goToAllSaved()">
+                            <div class="bg_image back_image bottom_right" [style.backgroundImage]="'url('+ posts[3].img +')'"></div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <ion-label>All Posts</ion-label>
+            </ion-col>
+
+            <ion-col size="6" class="left">
+                <div class="col_div">
+                    <ion-row>
+                        <ion-col size="12" (click)="goToAllSaved()">
+                            <div class="bg_image back_image2" [style.backgroundImage]="'url('+ posts[4].img +')'"></div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <ion-label>Favourite</ion-label>
+            </ion-col>
+
+            <ion-col size="6" class="right">
+                <div class="col_div">
+                    <ion-row>
+                        <ion-col size="12" (click)="goToAllSaved()">
+                            <div class="bg_image back_image2" [style.backgroundImage]="'url('+ posts[5].img +')'"></div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <ion-label>Technology</ion-label>
+            </ion-col>
+
+        </ion-row>
+    </div>
+</ion-content>

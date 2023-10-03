@@ -1,0 +1,41 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Close Friends</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="user_flex">
+            <div class="bg_image back_image" *ngFor="let item of (users | slice: 2: 6)" [style.backgroundImage]="'url('+ item.img +')'"></div>
+            <div class="back_image green_box">
+                <ion-icon name="star"></ion-icon>
+            </div>
+        </div>
+
+        <ion-label class="bold_lbl">Add to your Close Friends List</ion-label>
+        <ion-label class="small_lbl">
+            You may noy always want to share with everyone who follows you.
+            You can create a list of close friends and choose to share your story with only them.
+            <span>Learn how it works.</span>
+        </ion-label>
+        <ion-button expand="block" mode="ios" class="blue_btn" (click)="goToCloseList()">
+            Get Started
+        </ion-button>
+
+    </div>
+</ion-content>

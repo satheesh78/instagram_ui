@@ -1,0 +1,133 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>desperate_enuf</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="openNotificationSettings()">
+                <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+            </ion-button>
+            <ion-button (click)="presentActionSheet()">
+                <ion-icon slot="icon-only" name="ellipsis-vertical-sharp"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="user_detail_container">
+            <div class="user_container">
+                <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/users/user1.jpg)'"></div>
+                <div class="user_detail">
+                    <div>
+                        <ion-label class="no_lbl">20</ion-label>
+                        <ion-label>Posts</ion-label>
+                    </div>
+                    <div>
+                        <ion-label class="no_lbl">30</ion-label>
+                        <ion-label>Followers</ion-label>
+                    </div>
+                    <div>
+                        <ion-label class="no_lbl">40</ion-label>
+                        <ion-label>Following</ion-label>
+                    </div>
+                </div>
+            </div>
+
+            <ion-label class="username">memes | news | comedy</ion-label>
+            <ion-label class="follow_lbl">Followed by <span>king_0f_queen</span>, <span>average_student</span> and <span>7 others</span></ion-label>
+
+            <div class="btn_flex">
+                <ion-button mode="ios" class="simp_btn" fill="outline">
+                    Following
+                </ion-button>
+                <ion-button mode="ios" class="simp_btn" fill="outline">
+                    Messages
+                </ion-button>
+                <div class="icn_btn">
+                    <ion-icon name="chevron-down"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_div">
+
+            <ion-segment value="post" mode="md" color="dark" (ionChange)="segmentChanged($event)">
+                <ion-segment-button value="post">
+                    <ion-icon name="grid-outline"></ion-icon>
+                </ion-segment-button>
+                <ion-segment-button value="reel">
+                    <ion-icon name="film-outline"></ion-icon>
+                </ion-segment-button>
+                <ion-segment-button value="video">
+                    <ion-icon name="play-outline"></ion-icon>
+                </ion-segment-button>
+                <ion-segment-button value="tag">
+                    <ion-icon name="person-outline"></ion-icon>
+                </ion-segment-button>
+            </ion-segment>
+
+            <ion-row *ngIf="tabID == 'post'">
+                <ion-col size="4" *ngFor="let item of posts;let i = index">
+                    <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'">
+                        <ion-icon name="copy" *ngIf="item.type == 'gallery'" class="simp_icn"></ion-icon>
+                        <ion-icon name="play" *ngIf="item.type == 'video'" class="simp_icn"></ion-icon>
+                        <ion-icon name="film" *ngIf="item.type == 'reels'" class="simp_icn"></ion-icon>
+                    </div>
+                </ion-col>
+            </ion-row>
+
+            <ion-row *ngIf="tabID == 'reel'">
+                <ion-col size="4" *ngFor="let item of posts;let i = index">
+                    <div class="bg_image back_image2" [style.backgroundImage]="'url('+ item.img +')'">
+                        <div class="overlay_div">
+                            <div class="count_div">
+                              <ion-icon name="play-outline"></ion-icon>
+                              <ion-label>40.2k</ion-label>
+                            </div>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+
+            <ion-row *ngIf="tabID == 'video'">
+                <ion-col size="4" *ngFor="let item of posts;let i = index">
+                    <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'">
+                        <div class="overlay_div">
+                            <div class="count_div">
+                              <ion-icon name="play-outline"></ion-icon>
+                              <ion-label>40.2k</ion-label>
+                            </div>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+
+
+            <ion-row *ngIf="tabID == 'tag'">
+                <ion-col size="4" *ngFor="let item of posts;let i = index">
+                    <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'">
+                        <ion-icon name="copy" *ngIf="item.type == 'gallery'" class="simp_icn"></ion-icon>
+                        <ion-icon name="play" *ngIf="item.type == 'video'" class="simp_icn"></ion-icon>
+                        <ion-icon name="film" *ngIf="item.type == 'reels'" class="simp_icn"></ion-icon>
+                    </div>
+                </ion-col>
+            </ion-row>
+
+        </div>
+
+    </div>
+</ion-content>

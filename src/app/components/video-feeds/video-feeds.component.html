@@ -1,0 +1,15 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<div class="div_banner" (click)="toggleVideo()">
+  <video preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer" poster="assets/imgs/feeds/3.jpg"
+    #videoPlayer>
+    <source src="assets/imgs/feeds/feeds.mp4" type="video/mp4" />
+  </video>
+  <img src="assets/imgs/play.png" *ngIf="flagVideo" class="icon_play" />
+</div>

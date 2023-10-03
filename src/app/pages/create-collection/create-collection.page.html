@@ -1,0 +1,35 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Create Collection</ion-title>
+        <ion-buttons slot="end">
+            <ion-button fill="clear" class="clear_btn" mode="ios" (click)="goBack()">
+                Add
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/feeds/6.jpg)'"></div>
+
+        <ion-label class="blue_lbl">Change Cover</ion-label>
+
+        <ion-input placeholder="Collection Name"></ion-input>
+
+    </div>
+</ion-content>

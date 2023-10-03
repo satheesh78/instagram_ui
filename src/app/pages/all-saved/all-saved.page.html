@@ -1,0 +1,61 @@
+<!--
+  Authors : initappz (Rahul Jograna)
+  Website : https://initappz.com/
+  App Name : ionic6clone apps Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://initappz.com/license
+  Copyright and Good Faith Purchasers © 2021-present initappz.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="goBack()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>All Post</ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-segment value="post" mode="md" color="dark" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="post">
+            <ion-icon name="grid-outline"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="reel">
+            <ion-icon name="film-outline"></ion-icon>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <ion-row *ngIf="tabID == 'post'">
+            <ion-col size="4" *ngFor="let item of posts;let i = index">
+                <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'">
+                    <ion-icon name="copy" *ngIf="item.type == 'gallery'"></ion-icon>
+                    <ion-icon name="play" *ngIf="item.type == 'video'"></ion-icon>
+                    <ion-icon name="film" *ngIf="item.type == 'reels'"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="tabID == 'reel'">
+            <ion-col size="4" *ngFor="let item of posts;let i = index">
+                <div class="bg_image back_image2" [style.backgroundImage]="'url('+ item.img +')'">
+                    <div class="overlay_div">
+                        <div class="count_div">
+                          <ion-icon name="play-outline"></ion-icon>
+                          <ion-label>40.2k</ion-label>
+                        </div>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+
+    </div>
+</ion-content>
+
